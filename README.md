@@ -160,12 +160,12 @@ Once our `state service` has been declared, we proceed to initialize it inside t
 	this.characterStateService = interpret(characterMachine);
 
 	// initialize the machine
-    this.characterStateService.start();
+	this.characterStateService.start();
 
 	// subscribe to changes
-    this.characterStateService.subscribe(state => {
-      console.log(state.value);
-    })
+	this.characterStateService.subscribe(state => {
+	    console.log(state.value);
+	})
 ````
 
 First we `interpret` our machine, this will help us to track changes, execute side-effects and more functionalities according to their [interpreter documentation](https://xstate.js.org/docs/guides/interpretation.html#interpreter).
@@ -195,7 +195,7 @@ export class MyAngularComponent {
     
     myFunction = () => {
         this.characterStateService.send('NEXT');
-	} 
+    } 
 
 }
 ````
